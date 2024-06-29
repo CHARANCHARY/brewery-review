@@ -38,7 +38,7 @@ function Login() {
 
     const registerHandler = e =>{
         e.preventDefault();
-        axios.post('http://localhost:5000/register', data)
+        axios.post('https://brewery-review-a3v2.onrender.com/register', data)
         .then(
             res => {
                 alert(res.data);
@@ -71,7 +71,7 @@ function Login() {
     }
     const loginHandler = e =>{
         e.preventDefault();
-        axios.post('http://localhost:5000/login' , logindata)
+        axios.post('https://brewery-review-a3v2.onrender.com/login' , logindata)
         .then(
             res => {
             localStorage.setItem('token', res.data.token);
