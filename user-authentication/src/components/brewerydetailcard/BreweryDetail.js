@@ -22,7 +22,7 @@ const BreweryDetail = () => {
 
         const fetchReviews = async () => {
             try {
-                const reviewsResponse = await axios.get(`http://localhost:5000/brewery/${id}`);
+                const reviewsResponse = await axios.get(`https://brewery-review-a3v2.onrender.com/brewery/${id}`);
                 setReviews(reviewsResponse.data);
             } catch (error) {
                 console.error('Error fetching reviews:', error);
@@ -55,7 +55,7 @@ const BreweryDetail = () => {
           const description = newReview.description;
           const breweryId = id;
         console.log('Brewery ID:', id);
-            const reviewResponse = await axios.post(`http://localhost:5000/brewery/${id}`,
+            const reviewResponse = await axios.post(`https://brewery-review-a3v2.onrender.com/brewery/${id}`,
                 {
                     breweryId,
                     rating,
